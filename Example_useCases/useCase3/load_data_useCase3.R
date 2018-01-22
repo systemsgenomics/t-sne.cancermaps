@@ -30,10 +30,6 @@ load("DATA/useCase1/HEMAP_data.Rdata")
 # used to select another subset. f.e. selecting Multiple Myeloma: matrix[,subtypes=="MM"].
 matrix=matrix[,subtypes=="T-ALL"|subtypes=="pre-B-ALL"]
 
-# use 15% variable genes defined from whole hemap dataset to reproduce the same ALL map coordinates
-top15var_genes = scan('DATA/useCase2/data9544_15pct_topVariating_genelist.txt',"a", quiet = T) # use 15% of the most variable genes, based on whole hemap dataset
-matrix=matrix[rownames(matrix)%in%top15var_genes,]
-
 # Load color vector of cytogenetics, mutations or clinical annotations to be used for plotting with Hemap cancer maps.
 # When plotting different datasets, user has to naturally provide different color vectors to match the samples in the
 # corresponding gene expression matrix.

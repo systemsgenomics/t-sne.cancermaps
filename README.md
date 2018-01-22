@@ -11,8 +11,7 @@ Detailed User Guide: link. See use case examples for more information on usage i
 
 # Use Case Examples: t-SNE map optimization, remapping and data integration
 
-add here cancermap image, located in combio fileserver:
-![alt text](https://bioinformatics.uef.fi/~ppolonen/git_images/cancermap_git.png)
+![alt text](https://bioinformatics.uef.fi/~ppolonen/git_images/Cancermap_git.png)
 
 More information: 
 Mehtonen & Polonen et al. https://doi.org/10.1101/248096 
@@ -26,9 +25,9 @@ Use case 3: Comparing an independent dataset with Hemap samples using t-SNE maps
 ### Download example data:
 The normalized data matrix is available for download from the web resource for further integrative analysis using standard R/Bioconductor software. The required objects are available as RData files and facilitate joint analysis of new datasets.
 **Download data under cloned git folder Example_useCases/DATA**. This way, wrapper scripts work without modifying paths to read datasets in R.
-```shell
-wget combio localfolder
-```
+
+https://drive.google.com/open?id=18i6EPHNDJyrAfZTLadKWfHQt3NxNd_za
+
 
 ### How to run example use cases:
 Execute in R:
@@ -71,6 +70,8 @@ source("Dataset_cancermap_comparison.R") # Use Case 3
 
 **R libraries:**
 These R libraries are needed, for easy install, execute in R:
+
+Running note: use Rtsne 0.10 or 0.9 to reproduce cancermap coordinates in Mehtonen & Polonen et al.
     
 ```R
 # Packages, if not found, install automatically.

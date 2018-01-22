@@ -20,7 +20,6 @@ CancerMap=function(data, name, VAR=NULL, BW=0.9, PATH_OUTPUT){
     outname=paste0(PATH_OUTPUT, "cancermap_", name, "_", VAR, "pct_genes_", "BH-SNE_mean-shift_BW", BW, ".txt")
     outnamecent=paste0(PATH_OUTPUT, "cancermap_", name, "_", VAR, "pct_genes_", "BH-SNE_mean-shift_BW", BW, "_cluster_centroids.txt")
     
-    
   }else{
     outname=paste0(PATH_OUTPUT, "cancermap_", name, "_", "BH-SNE_mean-shift_BW", BW, ".txt")
     outnamecent=paste0(PATH_OUTPUT, "cancermap_", name, "_", "BH-SNE_mean-shift_BW", BW, "_cluster_centroids.txt")

@@ -1,5 +1,5 @@
 # *******************************************************************************************
-#       FUNCTION: Remap new samples to TSNE map coordinate space | 15/01/2017 | Sergei Häyrynen, Petri Pölönen and Juha Mehtonen
+#       FUNCTION: Remap new samples to TSNE map coordinate space | 15/01/2018 | Sergei Häyrynen, Petri Pölönen and Juha Mehtonen
 # *******************************************************************************************
 
 #********************************************************************************************

@@ -1,5 +1,5 @@
 # *******************************************************************************************
-#       FUNCTION: detect clusters on cancermap | 15/01/2017 | Petri Pölönen and Juha Mehtonen
+#       FUNCTION: detect clusters on cancermap | 15/01/2018 | Petri Pölönen and Juha Mehtonen
 # *******************************************************************************************
 
 #********************************************************************************************
@@ -27,7 +27,7 @@ print(paste0("Running TSNE for: ", NAME, "... Done"))
 
 # hemap cancermap
 print(paste0("Running TSNE for: ", HEMAP, "..."))
-clust_hemap=CancerMap(data = t(matrix), name = HEMAP, BW = BW_HEMAP, PATH_OUTPUT = PATH_OUTPUT)
+clust_hemap=CancerMap(data = t(matrix), name = HEMAP, VAR=VAR, BW = BW_HEMAP, PATH_OUTPUT = PATH_OUTPUT)
 print(paste0("Running TSNE for: ", HEMAP, "... Done"))
 
 #********************************************* Make cancermap plot, color clusters and cytogenetics *******************************
@@ -79,8 +79,8 @@ if(file.exists(paste0(PATH_OUTPUT, HEMAP, "_", NAME, "_", PATHW, "_GSVA.Rdata"))
 
 #********************************************* Step 3: Plot GSVA scores to hemap cancermap ************************************************************
 
-X_hemap=read.delim(paste0(PATH_OUTPUT, "cancermap_", HEMAP, "_", "BH-SNE_mean-shift_BW", BW_HEMAP, ".txt"), header=T, stringsAsFactors=F)
-peaks_hemap=read.delim(paste0(PATH_OUTPUT, "cancermap_", HEMAP, "_", "BH-SNE_mean-shift_BW", BW_HEMAP, "_cluster_centroids.txt"), header=T, stringsAsFactors=F)
+X_hemap=read.delim(paste0(PATH_OUTPUT, "cancermap_", HEMAP, "_",VAR, "pct_genes_", "BH-SNE_mean-shift_BW", BW_HEMAP, ".txt"), header=T, stringsAsFactors=F)
+peaks_hemap=read.delim(paste0(PATH_OUTPUT, "cancermap_", HEMAP, "_",VAR, "pct_genes_", "BH-SNE_mean-shift_BW", BW_HEMAP, "_cluster_centroids.txt"), header=T, stringsAsFactors=F)
 
 feats=rownames(gsva_es)
 
