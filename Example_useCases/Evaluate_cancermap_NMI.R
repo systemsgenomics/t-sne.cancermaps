@@ -51,16 +51,16 @@ res.pca <- calcMeasures(data = data, phenotype = aml_anno$Cytogenetics, sample_s
 
 # Modify data.frames for plotting
 library(reshape2)
-res.gs <- melt(data = res.gs, id.vars = 1:2, measure.vars = 3:4)
-res.pca <- melt(data = res.pca, id.vars = 1:2, measure.vars = 3:4)
+res.gs <- melt(data = res.gs, id.vars = 1:2, measure.vars = 3:5)
+res.pca <- melt(data = res.pca, id.vars = 1:2, measure.vars = 3:5)
 
 # Load library for plots
 library(ggplot2)
 
 # Generate plots
-p.gs <- ggplot(res.gs, aes(x = i, y = value, color = variable)) + geom_line() + scale_colour_manual(values=c("blue", "red"))
+p.gs <- ggplot(res.gs, aes(x = i, y = value, color = variable)) + geom_line() + scale_colour_manual(values=c("blue", "red", "violet"))
 p.gs <- p.gs + labs(title = "Gene selection", x = "% genes", y = "NMI")
-p.pca <- ggplot(res.pca, aes(x = i, y = value, color = variable)) + geom_line() + scale_colour_manual(values=c("blue", "red"))
+p.pca <- ggplot(res.pca, aes(x = i, y = value, color = variable)) + geom_line() + scale_colour_manual(values=c("blue", "red", "violet"))
 p.pca <- p.pca + labs(title = "PCA", x = "PCs", y = "NMI")
 
 # Print to PDF
