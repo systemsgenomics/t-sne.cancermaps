@@ -46,6 +46,9 @@ calcMeasures <- function(data, phenotype, sample_series, PCA = F) {
     # Combine data to result matrix R.
     tmp = data.frame(cbind(i,length(ni),nMI,nMI_lab))
     colnames(tmp) = c("i", "no_clusters", "pNMI", "eNMI")
+
+    # Calculate cNMI
+    tmp$cNMI = (tmp$pNMI + (1 - tmp$eNMI)) / 2
     
     tmp
   }
