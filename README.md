@@ -11,10 +11,8 @@ Detailed User Guide: link. See use case examples for more information on usage i
 
 # Use Case Examples: t-SNE map optimization, remapping and data integration
 
-![alt text](https://bioinformatics.uef.fi/~ppolonen/git_images/Cancermap_git.png)
-
 More information: 
-Mehtonen & Polonen et al. https://doi.org/10.1101/248096 
+Mehtonen & Polonen et al. https://doi.org/10.1093/nar/gkz281
 
 Use case 1: Find optimal parameters to use for t-SNE projection
 
